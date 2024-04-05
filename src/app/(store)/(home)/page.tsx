@@ -17,7 +17,7 @@ async function getFeaturedProducts(): Promise<Product[]> {
 }
 
 export default async function Home() {
-  const [highligtedProduct, ...otherProcuts] = await getFeaturedProducts()
+  const [highligtedProduct, ...otherProducts] = await getFeaturedProducts()
 
   return (
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
@@ -42,7 +42,7 @@ export default async function Home() {
         </div>
       </Link>
 
-      {otherProcuts.map((product) => {
+      {otherProducts.map((product) => {
         return (
           <Link
             key={product.id}
