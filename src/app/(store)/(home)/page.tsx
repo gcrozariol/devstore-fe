@@ -1,5 +1,6 @@
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
+import formattedPrice from '@/utils/formatted-price'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -36,12 +37,7 @@ export default async function Home() {
         <div className="absolute bottom-28 right-28 flex h-12 max-w-[280px] items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
           <span className="truncate text-sm">{highligtedProduct.title}</span>
           <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
-            {highligtedProduct.price.toLocaleString('en-US', {
-              style: 'currency',
-              currency: 'USD',
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0,
-            })}
+            {formattedPrice(highligtedProduct.price)}
           </span>
         </div>
       </Link>
@@ -65,12 +61,7 @@ export default async function Home() {
             <div className="absolute bottom-10 right-10 flex h-12 max-w-[280px] items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
               <span className="truncate text-sm">{product.title}</span>
               <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
-                {product.price.toLocaleString('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 0,
-                })}
+                {formattedPrice(product.price)}
               </span>
             </div>
           </Link>
