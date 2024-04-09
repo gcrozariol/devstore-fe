@@ -3,6 +3,6 @@ export default function formattedPrice(price: number) {
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
+    maximumFractionDigits: 2,
   })
 }

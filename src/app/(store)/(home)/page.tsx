@@ -1,6 +1,7 @@
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 import formattedPrice from '@/utils/formatted-price'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -16,6 +17,10 @@ async function getFeaturedProducts(): Promise<Product[]> {
   return products
 }
 
+export const metadata: Metadata = {
+  title: 'home',
+}
+
 export default async function Home() {
   const [highligtedProduct, ...otherProducts] = await getFeaturedProducts()
 
@@ -27,8 +32,8 @@ export default async function Home() {
       >
         <Image
           src={highligtedProduct.image}
-          width={920}
-          height={920}
+          width={1000}
+          height={1000}
           quality={100}
           alt={highligtedProduct.title}
           className="transition-transform duration-500 group-hover:scale-105"
@@ -46,13 +51,13 @@ export default async function Home() {
         return (
           <Link
             key={product.id}
-            href={`product/${highligtedProduct.slug}`}
+            href={`product/${product.slug}`}
             className="group relative col-span-3 row-span-3 flex justify-center overflow-hidden rounded-lg bg-zinc-900"
           >
             <Image
               src={product.image}
-              width={920}
-              height={920}
+              width={1000}
+              height={1000}
               quality={100}
               alt={product.title}
               className="transition-transform duration-500 group-hover:scale-105"
