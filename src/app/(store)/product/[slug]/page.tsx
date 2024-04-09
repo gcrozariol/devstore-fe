@@ -1,3 +1,4 @@
+import { AddToCartButton } from '@/components/add-to-cart-button'
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 import formattedPrice from '@/utils/formatted-price'
@@ -110,13 +111,7 @@ export default async function ProductPage({
             </button>
           </div>
         </div>
-
-        <button
-          type="button"
-          className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white transition-colors hover:bg-emerald-500 active:bg-emerald-700"
-        >
-          Add to cart
-        </button>
+        <AddToCartButton productId={product.id} />
       </div>
     </div>
   )
