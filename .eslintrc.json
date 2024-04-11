@@ -3,5 +3,8 @@
     "next/core-web-vitals",
     "@rocketseat/eslint-config/next",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/no-namespace": "off"
+  }
 }
