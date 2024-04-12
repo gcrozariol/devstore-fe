@@ -4,6 +4,7 @@ on: push
 
 jobs:
   commitlint:
+    if: (github.actor != 'dependabot[bot]') && (contains(github.head_ref, 'dependabot/github_actions/') == false)
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
