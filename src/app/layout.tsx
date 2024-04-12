@@ -2,10 +2,16 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
-  title: 'devstore',
+  title: {
+    template: '%s | devstore',
+    default: 'devstore',
+  },
   description: 'DevStore • Your Geek E-commerce',
 }
 
@@ -15,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className={inter.variable} lang="en">
+      <body className="bg-zinc-950 text-zinc-50 antialiased">{children}</body>
     </html>
   )
 }
