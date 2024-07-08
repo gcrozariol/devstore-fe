@@ -30,7 +30,7 @@
     "autoprefixer": "^10.0.1",
     "cypress": "^13.13.0",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2",
+    "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
     "postcss": "^8",
