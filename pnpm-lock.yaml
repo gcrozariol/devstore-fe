@@ -50,7 +50,7 @@ importers:
         version: 19.0.10
       '@types/react-dom':
         specifier: ^19
-        version: 19.0.3(@types/react@19.0.10)
+        version: 19.0.4(@types/react@19.0.10)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.3)
@@ -467,8 +467,8 @@ packages:
   '@types/node@22.13.1':
     resolution: {integrity: sha512-jK8uzQlrvXqEU91UxiK5J7pKHyzgnI1Qnl0QDHIgVGuolJhRb9EEl28Cj9b3rGR8B2lhFCtvIm5os8lFnO/1Ew==}
 
-  '@types/react-dom@19.0.3':
-    resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
+  '@types/react-dom@19.0.4':
+    resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
     peerDependencies:
       '@types/react': ^19.0.0
 
@@ -3322,7 +3322,7 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/react-dom@19.0.3(@types/react@19.0.10)':
+  '@types/react-dom@19.0.4(@types/react@19.0.10)':
     dependencies:
       '@types/react': 19.0.10
 
