@@ -27,7 +27,7 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.22",
+    "autoprefixer": "^10.4.23",
     "cypress": "^15.7.1",
     "eslint": "^8",
     "eslint-config-next": "15.5.6",
